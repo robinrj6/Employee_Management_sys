@@ -18,19 +18,20 @@ public class Employee{
 	@Column(name = "email")
 	private String email;
 	
-	public Employee(int empid, String empname, int deptid, String email) {
-		super();
+	public Employee(int deptid, String email,String empname, int empid) {
 		this.empid = empid;
 		this.empname = empname;
 		this.deptid = deptid;
 		this.email = email;
 	}
+	
 	public Employee() {
+		super();
 	}
-	public Integer getEmpid() {
+	public int getEmpid() {
 		return empid;
 	}
-	public void setEmpid(Integer empid) {
+	public void setEmpid(int empid) {
 		this.empid = empid;
 	}
 	public String getEmpname() {
@@ -39,10 +40,10 @@ public class Employee{
 	public void setEmpname(String empname) {
 		this.empname = empname;
 	}
-	public Integer getDeptid() {
+	public int getDeptid() {
 		return deptid;
 	}
-	public void setDeptid(Integer deptid) {
+	public void setDeptid(int deptid) {
 		this.deptid = deptid;
 	}
 	public String getEmail() {
