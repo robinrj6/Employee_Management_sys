@@ -6,6 +6,7 @@ import MainComponent from './components/MainComponent';
 import SignupComponent from './components/SignupComponent';
 import NavHeader from './components/NavHeader';
 import ListComponent from './components/ListComponent';
+import ActionComponent from './components/ActionComponent';
 
 
 
@@ -20,6 +21,11 @@ function App() {
           <Route path="list" element={<ListComponent />} />
           <Route path="login" element={<LoginComponent />} />
           <Route path="signup" element={<SignupComponent />} />
+          <Route path="actions" >
+            <Route index element={<ActionComponent />} />
+            <Route path="3.1" element={<ActionComponent />} />
+            <Route path="*" element={<MainComponent />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

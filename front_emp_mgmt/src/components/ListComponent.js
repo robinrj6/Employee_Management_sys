@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './ListComponent.css';
+
 const ListComponent = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
