@@ -1,0 +1,15 @@
+table{
+    margin: 2rem auto;
+    align-self: center; 
+    border: 10px orange solid; 
+    
+}
+
+th{
+    padding: 1rem 1rem;
+    border-bottom: 10px orange solid; 
+}
+td{
+    padding: .5rem 1rem;
+   
+}
