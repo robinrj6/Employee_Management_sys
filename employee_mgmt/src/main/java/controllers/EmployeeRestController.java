@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import entities.Employee;
 import services.EmployeeService;
@@ -41,9 +43,10 @@ public class EmployeeRestController{
 		return empService.deleteById(id);
 	}
 	
-	@PutMapping("/updateDept/{id}/{newDeptid}")
-	public Employee updateDept(@PathVariable Integer id,@PathVariable Integer newDeptid) {
+	@PutMapping("/updateDept")
+	public Employee updateDept(@RequestBody  Integer id,@RequestBody  Integer newDeptid) {
+		System.out.println(id.toString()+" "+newDeptid.toString());
 		return empService.updateDept(id, newDeptid);
 	}
-	
+		
 }

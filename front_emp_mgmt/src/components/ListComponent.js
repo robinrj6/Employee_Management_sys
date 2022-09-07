@@ -16,7 +16,6 @@ const ListComponent = () => {
 
     return (
         <div>
-            <p>This is the ListComponent</p>
             <table>
                 <tr>
                     <th>Id</th>

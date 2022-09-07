@@ -15,18 +15,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavHeader />
-        <Routes>
-          <Route path="/" element={<MainComponent />} />
-          <Route path="home" element={<MainComponent />} />
-          <Route path="list" element={<ListComponent />} />
-          <Route path="login" element={<LoginComponent />} />
-          <Route path="signup" element={<SignupComponent />} />
-          <Route path="actions" >
-            <Route index element={<ActionComponent />} />
-            <Route path="3.1" element={<ActionComponent />} />
-            <Route path="*" element={<MainComponent />} />
-          </Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<MainComponent />} />
+            <Route path="home" element={<MainComponent />} />
+            <Route path="list" element={<ListComponent />} />
+            <Route path="login" element={<LoginComponent />} />
+            <Route path="signup" element={<SignupComponent />} />
+            <Route path="actions" >
+              <Route index element={<ActionComponent />} />
+              <Route path="3.1" element={<ActionComponent />} />
+              <Route path="*" element={<MainComponent />} />
+            </Route>
+          </Routes>
       </BrowserRouter>
     </div>
   );

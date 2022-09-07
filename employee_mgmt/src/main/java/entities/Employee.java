@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties("hibernateLazyInitializer")
 public class Employee{
 	@Id
+	@GeneratedValue
 	@Column(name = "empid")
 	private int empid;
 	@Column(name = "empname")

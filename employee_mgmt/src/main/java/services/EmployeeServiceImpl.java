@@ -17,6 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService<Employee, Integer> {
 	
 	@Autowired
 	public EmployeeRepository empRepo;
+	
 	@Override
 	public Collection<Employee> getAll() {
 		Collection<Employee> allEmp=empRepo.findAll() ;
@@ -33,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService<Employee, Integer> {
 	@Override
 	public Employee add(Employee emp) {
 		System.out.println(emp);
-		empRepo.save(emp);
+		empRepo.saveAndFlush(emp);
 		return emp;
 	}
 
