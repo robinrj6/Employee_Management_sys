@@ -26,7 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService<Employee, Integer> {
 
 	@Override
 	public Employee getById(Integer key) {
-		Employee emp=empRepo.getReferenceById(key);
+		Employee emp=empRepo.getReferenceById(key) ;
 		System.out.println(emp);
 		return emp;
 	}
@@ -51,9 +51,9 @@ public class EmployeeServiceImpl implements EmployeeService<Employee, Integer> {
 	}
 
 	@Override
-	public Employee updateDept(Integer key, Integer deptid) {
-		empRepo.updateDept(key, deptid);
-		return empRepo.getReferenceById(key);
+	public Employee updateDept(Employee emp) {
+		empRepo.save(emp);	
+		return emp;
 	}
 
 }

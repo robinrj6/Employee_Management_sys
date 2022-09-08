@@ -7,5 +7,5 @@ public interface EmployeeService<T, K> {
 	T getById(K key);
 	T add(T key);
 	T deleteById(K key);
-	T updateDept(K key,K deptid);
+	T updateDept(T key);
 }

@@ -16,7 +16,6 @@ class AddComponent extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                empid: values.target.id.value,
                 empname: values.target.name.value,
                 deptid: values.target.did.value,
                 email: values.target.email.value
@@ -36,10 +35,6 @@ class AddComponent extends Component {
         return (
             <div className="container" >
                 <Form onSubmit={(values) => this.handleSubmit(values)}>
-                    <FormGroup>
-                        <Label for="id" >Enter Employee ID</Label>
-                        <Input type="number" name="id" id="id" required />
-                    </FormGroup>
                     <FormGroup>
                         <Label for="examplePassword">Enter Employee Name</Label>
                         <Input type="text" name="name" id="name" required />

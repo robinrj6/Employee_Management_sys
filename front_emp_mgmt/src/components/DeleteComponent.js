@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-function DeleteComponent(){
-    return(
-        <div>
-            This is the DeleteComponent. 
-        </div>
-    );
+class DeleteComponent extends Component {
+    render() {
+        return (
+            <div>
+                This is the DeleteComponent.
+            </div>
+        );
+    }
 }
 
 export default DeleteComponent;
