@@ -22,12 +22,11 @@ class AddComponent extends Component {
             })
         }).then((response) => response.text())
             .then((responseText) => {
-                alert(responseText);
+                alert(responseText+"\n\tSuccessfully Added!!!");
             })
             .catch((error) => {
                 console.error(error);
             });
-        alert("Successfullt added");
         values.target.reset();
     }
 

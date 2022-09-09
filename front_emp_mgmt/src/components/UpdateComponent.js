@@ -22,12 +22,11 @@ class UpdateComponent extends Component {
                 })
             }).then((response) => response.text())
                 .then((responseText) => {
-                    alert(responseText);
+                    alert(responseText+"\n\tSuccessfully Updated!!!");
                 })
                 .catch((error) => {
                     console.error(error);
                 });
-            alert("Successfullt updated");
             values.target.reset();
         }
 
